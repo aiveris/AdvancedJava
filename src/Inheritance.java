@@ -1,6 +1,4 @@
 public class Inheritance {
-
-
     public static void main(String[] args) {
 
         Vehicle myVehicle = new Vehicle(100);
@@ -28,7 +26,8 @@ public class Inheritance {
         System.out.println(fcar.maxSpeed);
         fcar.maxSpeed = 10;
         System.out.println(fcar.maxSpeed);
-        System.out.println("FoolishCars Parents maxSpeed: " + fcar.I_stillWantParentClassSpeed());
+        System.out.println("FoolishCars Parents maxSpeed: " +
+                fcar.I_stillWantParentClassSpeed());
         fcar.startDriving();
     }
 }
@@ -56,8 +55,6 @@ class Vehicle {
     }*/
 }
 
-
-
 class Car extends Vehicle {
     private boolean raceCar;
 
@@ -65,7 +62,7 @@ class Car extends Vehicle {
         System.out.println("Car Constructor()");
     }
     public Car(int maxSpeed, boolean raceCar) {
-        super(maxSpeed);//knock this out... and maxSpeed wont be set
+        // super(maxSpeed);//knock this out... and maxSpeed wont be set
         this.raceCar = raceCar;
         System.out.println("Car Constructor(maxSpeed,raceCar)");
     }
@@ -74,7 +71,6 @@ class Car extends Vehicle {
         return raceCar;
     }
 }
-
 
 class FoolishCar extends Vehicle {
     public int maxSpeed;
