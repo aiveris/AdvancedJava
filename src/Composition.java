@@ -1,8 +1,9 @@
 public class Composition {
     public static void main(String[] args) {
 
-        Owner me = new Owner("iOS", 14);
+        Owner me = new Owner("Windows", 8, 999);
         me.getMyStatus();
+
     }
 }
 
@@ -30,24 +31,42 @@ class Version {
         if (version > 10) {
             return "Great!";
         } else if (version < 10) {
-            return "Please Update,,,";
+            return "Please Update!";
         } else {
             return "Special Case!";
         }
     }
 }
 
-    class Owner{
-        Version v;
-        OS os;
+class Battery {
+    int power;
+    public Battery (int power){
+    this.power = power;
 
-        public Owner(String os, int v){
-            this.os= new OS(os);
-            this.v = new Version(v);
-        }
-
-        public void getMyStatus(){
-            System.out.println(os.getStatus());
-            System.out.println(v.getStatus());
+    }
+    public String getStatus(){
+        if (power >1000){
+            return "Powerful!";
+        }else{
+            return "Weak...!";
         }
     }
+}
+
+class Owner{
+    Version v;
+    OS os;
+    Battery bat;
+
+    public Owner(String os, int v, int p){
+        this.os= new OS(os);
+        this.v = new Version(v);
+        this.bat = new Battery(p);
+    }
+
+    public void getMyStatus(){
+        System.out.println(os.getStatus());
+        System.out.println(v.getStatus());
+        System.out.println(bat.getStatus());
+    }
+}

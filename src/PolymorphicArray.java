@@ -8,11 +8,15 @@ public class PolymorphicArray {
         arrObj[3] = new Footballer();
         arrObj[4] = new Cricketer();
 
+        SportsMan obj = new Athlete();
+        obj.GoPlay();
+        SportsMan obj2 = new Wrestler();
+        obj2.GoPlay();
+        System.out.println("===============");
 
         for(int i=0; i<5; i++){
             arrObj[i].GoPlay();
         }
-
     }
 }
 
@@ -24,7 +28,7 @@ class SportsMan{
 }
 
 class Athlete extends SportsMan{
-
+    int x;
     @Override
     public void GoPlay() {
         System.out.println("I sprint 100m");

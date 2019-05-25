@@ -1,5 +1,3 @@
-
-
 public class Incapsulation {
 
         private String firstName;
@@ -11,6 +9,7 @@ public class Incapsulation {
             this.firstName = firstName;
             this.lastName = lastName;
         }
+
         public String getFirstName() {
             return firstName;
         }
@@ -26,7 +25,7 @@ public class Incapsulation {
     }
 
 public static void main(String[] args) {
-        Incapsulation obj = new Incapsulation("aha","ohhh");
+        Incapsulation obj = new Incapsulation("Mindaugas","Beleka");
         System.out.println("========");
         System.out.println(obj.firstName);
         System.out.println(obj.getFirstName());
@@ -34,20 +33,19 @@ public static void main(String[] args) {
     System.out.println("========2222");
     obj.firstName="Pavel";
     System.out.println(obj.firstName);
+    System.out.println(obj.getFirstName());
     }
-
 }
 
 class stuff extends Incapsulation{
 
     public static void main(String[] args) {
-        Incapsulation obj = new Incapsulation("yohan","ohhh");
+        Incapsulation obj = new Incapsulation("Mindaugas","Beleka");
         System.out.println("========");
         //System.out.println(obj.firstName);
-        obj.setFirstName("pavel");
+        obj.setFirstName("rtehterfhje");
         System.out.println(obj.getFirstName());
     }
-
 }
 
 class Game {
@@ -63,7 +61,7 @@ class Game {
 
     public void setScore(int val) {
         this.score = val;//May be algorithm is hidden eg. score=[val + kills - (bullets/2)]
-        secret_score11 = val*11;//you can hide datatype too
+        secret_score11 = val*11;//you can hide data type too
         secret_score22 = val*22;
     }
 
@@ -85,12 +83,10 @@ class stuff2 extends Game{
         System.out.println(obj.getScore());
         obj.showSecrets();
 
-
         obj.setScore(5);
         System.out.println(obj.getScore());
         obj.showSecrets();
 
     }
-
 }
 
