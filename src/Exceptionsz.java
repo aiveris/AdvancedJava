@@ -10,25 +10,20 @@ public class Exceptionsz {
     }
 
     public static void main(String[] args){//  throws Exception {
-
         int x=0;
         //x  = 5 / 0;
-
         String str="hjgk"; // null; //giveMeSomeValue();
-       //System.out.println(str.length());
-
+        System.out.println(str.length());
         //FileOutputStream fos = new FileOutputStream("myFILE.txt");
         //(IOException | FileNotFoundException)
         //===============================================
 
-        /*
-        try {
+       /* try {
              x = 5 / 0;
         } catch(Exception e) {
-            System.out.println("Exception is caught and handled! ... e value: " + e.getMessage());
+            System.out.println("Exception is caught and handled! e value: " + e.getMessage());
         }
-        System.out.println("Program Continues... x: " + x);
-        */
+        System.out.println("Program Continues... x: " + x);*/
 
        /* try {
              x = 5/0;
@@ -44,7 +39,6 @@ public class Exceptionsz {
         arr = new int[5];
         //System.out.println("Array value at index[9]: " + arr[9]);
 
-        /*
         try {
              y = arr[9];
         } catch(ArithmeticException e) {
@@ -55,7 +49,6 @@ public class Exceptionsz {
             System.out.println("Exception is caught and handled!");
         }
         System.out.println("Program Continues... y: " + y);
-        */
 
         /*
         try {
